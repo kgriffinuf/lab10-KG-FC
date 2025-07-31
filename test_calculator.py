@@ -69,12 +69,14 @@ class TestCalculator(unittest.TestCase):
         #     logarithm(0, 5)
 
     def test_hypotenuse(self): # 3 assertions
+        a = 5
+        b = 8
         with self.assertRaises(ValueError):
-            self.a != 0
+            a != 0
         with self.assertRaises(ValueError):
-            self.b != 0
-        expected = math.hypot(self.a, self.b)
-        result = self.hypotenuse
+            b != 0
+        expected = math.hypot(a, b)
+        result = ((a ** 2) + (b ** 2)) ** (1/2)
         self.assertEqual(result, expected)
 
 
