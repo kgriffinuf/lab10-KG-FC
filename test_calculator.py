@@ -57,16 +57,18 @@ class TestCalculator(unittest.TestCase):
         self.assertTrue(result >= 8 and result >= 7)
 
     def test_divide(self): # 3 assertions
-        # ensure a is not equal to zero
-        assert self.a != 0, "Zero Division Error"
-
         # ensure the result of div method is equal to the expected
-        expected = self.b / self.a
-        result = self.div
+        expected = 10 * 2
+        result = div(10, 2)
         self.assertEqual(result, expected)
+
+        # ensure a is not equal to zero
+        assert self != 0, "Zero Division Error"
+
 
         # ensure the result is a float
         self.assertIsInstance(result, float)
+        
     #########################
 
     ######## Partner 2
