@@ -30,17 +30,17 @@ class TestCalculator(unittest.TestCase):
         # assertion 1
         a, b = 1, 2
         expected = 1
-        self.assertEqual(sub(a, b), expected)
+        self.assertEqual(subtract(a, b), expected)
 
         # assertion 2
         a, b = 650, 500
         expected = 150
-        self.assertEqual(sub(a, b), expected)
+        self.assertEqual(subtract(a, b), expected)
 
         # assertion 3
         a, b = 800, 1200
         expected = -400
-        self.assertEqual(sub(a, b), expected)
+        self.assertEqual(subtract(a, b), expected)
     # ##########################
 
     ####### Partner 1
@@ -58,8 +58,17 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self): # 3 assertions
         # ensure the result of div method is equal to the expected
+
         expected = 10 * 2
         result = div(10, 2)
+        numerator = 10
+        demoninator = 2
+        expected = numerator / demoninator
+        result = div(2, 10)
+        # ensure demoninator is not equal to zero
+        self.assertNotEqual(demoninator, 0, "demoninator cannot be zero")
+
+        # ensure result is equal to expected
         self.assertEqual(result, expected)
 
         # ensure a is not equal to zero
@@ -68,7 +77,7 @@ class TestCalculator(unittest.TestCase):
 
         # ensure the result is a float
         self.assertIsInstance(result, float)
-        
+
     #########################
 
     ######## Partner 2
