@@ -30,17 +30,19 @@ class TestCalculator(unittest.TestCase):
 
     def test_divide(self): # 3 assertions
         # ensure the result of div method is equal to the expected
-        expected = 10 * 2
+        numerator = 10
+        demoninator = 2
+        expected = numerator / demoniator
         result = div(10, 2)
+        # ensure demoninator is not equal to zero
+        self.assertNotEqual(demoniator, 0, "demoniator cannot be zero")
+
+        # ensure result is equal to expected
         self.assertEqual(result, expected)
-
-        # ensure a is not equal to zero
-        assert self != 0, "Zero Division Error"
-
 
         # ensure the result is a float
         self.assertIsInstance(result, float)
-        
+
     #########################
 
     ######## Partner 2
