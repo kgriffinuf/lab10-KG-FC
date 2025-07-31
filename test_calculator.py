@@ -33,7 +33,7 @@ class TestCalculator(unittest.TestCase):
         numerator = 10
         demoninator = 2
         expected = numerator / demoninator
-        result = div(10, 2)
+        result = div(2, 10)
         # ensure demoninator is not equal to zero
         self.assertNotEqual(demoninator, 0, "demoninator cannot be zero")
 
