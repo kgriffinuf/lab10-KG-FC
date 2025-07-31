@@ -8,11 +8,39 @@ import math
 
 class TestCalculator(unittest.TestCase):
     ######### Partner 2
-    # def test_add(self): # 3 assertions
-    #     fill in code
+    def test_add(self): # 3 assertions
+        # test the add function in calculator.py
+        # assertion 1
+        a, b = 1, 2
+        expected = 3
+        self.assertEqual(add(a, b), expected)
 
-    # def test_subtract(self): # 3 assertions
-    #     fill in code
+        # assertion 2
+        a, b = 500, 650
+        expected = 1150
+        self.assertEqual(add(a, b), expected)
+
+        # assertion 3
+        a, b = 800, 1200
+        expected = 12000
+        self.assertEqual(add(a, b), expected)
+
+    def test_subtract(self): # 3 assertions
+        # Test sub function in calculator.py
+        # assertion 1
+        a, b = 1, 2
+        expected = 1
+        self.assertEqual(sub(a, b), expected)
+
+        # assertion 2
+        a, b = 650, 500
+        expected = 150
+        self.assertEqual(sub(a, b), expected)
+
+        # assertion 3
+        a, b = 800, 1200
+        expected = -400
+        self.assertEqual(sub(a, b), expected)
     # ##########################
 
     ####### Partner 1
@@ -42,19 +70,30 @@ class TestCalculator(unittest.TestCase):
     #########################
 
     ######## Partner 2
-    # def test_divide_by_zero(self): # 1 assertion
-    #     # call division function inside, example:
-    #     # with self.assertRaises(<INSERT_ERROR_TYPE>):
-    #     #     div(0, 5)
-    #     fill in code
+    def test_divide_by_zero(self): # 1 assertion
+        with self.assertRaises(ZeroDivisionError):
+            div(0, 10)
 
-    # def test_logarithm(self): # 3 assertions
-    #     fill in code
+    def test_logarithm(self): # 3 assertions
+        # assertion 1
+        a, b = 2, 8
+        expected = 3
+        self.assertEqual(log(a, b), expected)
 
-    # def test_log_invalid_base(self): # 1 assertion
-    #     # use same technique from test_divide_by_zero
-    #     fill in code
-    # ##########################
+        # assertion 2
+        a, b = 2, 16
+        expected = 4
+        self.assertEqual(log(a, b), expected)
+
+        # assertion 3
+        a, b = 10, 1000
+        expected = 3
+        self.assertEqual(log(a, b), expected)
+
+
+    def test_log_invalid_base(self): # 1 assertion
+        with self.assertRaises(ValueError):
+            log(0, 10)
     
     ####### Partner 1
     def test_log_invalid_argument(self): # 1 assertion
