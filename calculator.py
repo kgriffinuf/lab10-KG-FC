@@ -1,3 +1,8 @@
+# https://github.com/kgriffinuf/lab10-KG-FC.git
+# Partner 1: Kenneth Griffin
+# Partner 2: Francisco Carmona
+
+
 """
 calculator.py
 - Defines functions used to create a simple calculator
