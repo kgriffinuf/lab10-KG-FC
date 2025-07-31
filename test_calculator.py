@@ -18,15 +18,15 @@ class TestCalculator(unittest.TestCase):
     ####### Partner 1
     def test_multiply(self): # 3 assertions
         # check if the results are equal to the expected
-        expected = self.a * self.b
-        result = self.mul
+        expected = 8 * 7
+        result = mul(8, 7)
         self.assertEqual(result, expected)
 
         # check if result is an integer
         self.assertIsInstance(result, int)
 
         # verify if the product(result) is greater than both variables a and b
-        self.assertTrue(result >= self.a and result >= self.b)
+        self.assertTrue(result >= 8 and result >= 7)
 
     def test_divide(self): # 3 assertions
         # ensure a is not equal to zero
