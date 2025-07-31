@@ -59,7 +59,7 @@ class TestCalculator(unittest.TestCase):
     ####### Partner 1
     def test_log_invalid_argument(self): # 1 assertion
         with self.assertRaises(ValueError):
-            math.log(self.a, self.b)
+            logarithm(0, 5)
         # call log function inside, example:
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #     logarithm(0, 5)
