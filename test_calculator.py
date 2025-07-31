@@ -32,10 +32,10 @@ class TestCalculator(unittest.TestCase):
         # ensure the result of div method is equal to the expected
         numerator = 10
         demoninator = 2
-        expected = numerator / demoniator
+        expected = numerator / demoninator
         result = div(10, 2)
         # ensure demoninator is not equal to zero
-        self.assertNotEqual(demoniator, 0, "demoniator cannot be zero")
+        self.assertNotEqual(demoninator, 0, "demoninator cannot be zero")
 
         # ensure result is equal to expected
         self.assertEqual(result, expected)
