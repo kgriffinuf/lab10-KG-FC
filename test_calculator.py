@@ -22,14 +22,14 @@ class TestCalculator(unittest.TestCase):
 
         # assertion 3
         a, b = 800, 1200
-        expected = 12000
+        expected = 2000
         self.assertEqual(add(a, b), expected)
 
     def test_subtract(self): # 3 assertions
         # Test sub function in calculator.py
         # assertion 1
         a, b = 1, 2
-        expected = 1
+        expected = -1
         self.assertEqual(subtract(a, b), expected)
 
         # assertion 2
@@ -99,7 +99,7 @@ class TestCalculator(unittest.TestCase):
         # assertion 3
         a, b = 10, 1000
         expected = 3
-        self.assertEqual(logarithm(a, b), expected)
+        self.assertAlmostEqual(logarithm(a, b), expected)
 
 
     def test_log_invalid_base(self): # 1 assertion
