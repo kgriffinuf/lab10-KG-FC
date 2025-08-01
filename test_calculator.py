@@ -130,8 +130,6 @@ class TestCalculator(unittest.TestCase):
         #    square_root(NUM)
         # Test basic function
         a = 6
-        b = 7
-
         expected = math.sqrt(a)
         result = math.sqrt(a)
         # a is greater than zero
@@ -142,7 +140,7 @@ class TestCalculator(unittest.TestCase):
 
         # value error for assertRaises
         with self.assertRaises(ValueError):
-            math.sqrt(a, b)
+            math.sqrt(a)
 
     #########################
 
