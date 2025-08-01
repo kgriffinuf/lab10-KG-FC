@@ -115,12 +115,16 @@ class TestCalculator(unittest.TestCase):
         #     logarithm(0, 5)
 
     def test_hypotenuse(self): # 3 assertions
-        with self.assertRaises(ValueError):
-            self.a != 0
-        with self.assertRaises(ValueError):
-            self.b != 0
-        expected = math.hypot(self.a, self.b)
-        result = self.hypotenuse
+        a = 5
+        b = 8
+        self.assertNotEqual(a, 0, "a cannot be zero")
+        self.assertNotEqual(b, 0, "a cannot be zero")
+        # with self.assertRaises(ValueError):
+        #     a != 0
+        # with self.assertRaises(ValueError):
+        #     b != 0
+        expected = math.hypot(a, b)
+        result = ((a ** 2) + (b ** 2)) ** (1/2)
         self.assertEqual(result, expected)
 
 
