@@ -89,22 +89,22 @@ class TestCalculator(unittest.TestCase):
         # assertion 1
         a, b = 2, 8
         expected = 3
-        self.assertEqual(log(a, b), expected)
+        self.assertEqual(logarithm(a, b), expected)
 
         # assertion 2
         a, b = 2, 16
         expected = 4
-        self.assertEqual(log(a, b), expected)
+        self.assertEqual(logarithm(a, b), expected)
 
         # assertion 3
         a, b = 10, 1000
         expected = 3
-        self.assertEqual(log(a, b), expected)
+        self.assertEqual(logarithm(a, b), expected)
 
 
     def test_log_invalid_base(self): # 1 assertion
         with self.assertRaises(ValueError):
-            log(0, 10)
+            logarithm(0, 10)
     
     ####### Partner 1
     def test_log_invalid_argument(self): # 1 assertion
@@ -138,9 +138,8 @@ class TestCalculator(unittest.TestCase):
         # result is a float
         self.assertIsInstance(result, float)
 
-        # value error for assertRaises
-        with self.assertRaises(ValueError):
-            math.sqrt(a)
+        # ensure result is equal to expected
+        self.assertEqual(result, expected)
 
     #########################
 
