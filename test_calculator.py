@@ -73,10 +73,6 @@ class TestCalculator(unittest.TestCase):
         b = 8
         self.assertNotEqual(a, 0, "a cannot be zero")
         self.assertNotEqual(b, 0, "a cannot be zero")
-        # with self.assertRaises(ValueError):
-        #     a != 0
-        # with self.assertRaises(ValueError):
-        #     b != 0
         expected = math.hypot(a, b)
         result = ((a ** 2) + (b ** 2)) ** (1/2)
         self.assertEqual(result, expected)
@@ -87,19 +83,20 @@ class TestCalculator(unittest.TestCase):
         # with self.assertRaises(<INSERT_ERROR_TYPE>):
         #    square_root(NUM)
         # Test basic function
-        expected = math.sqrt(self.a)
-        result = math.sqrt(self.a)
+        a = 6
+        b = 7
 
+        expected = math.sqrt(a)
+        result = math.sqrt(a)
         # a is greater than zero
-        with self.assertRaises(ValueError):
-            self.a < 0
+        self.assertGreater(a, 0, "a must be greater than zero")
 
         # result is a float
         self.assertIsInstance(result, float)
 
         # value error for assertRaises
         with self.assertRaises(ValueError):
-            math.sqrt(self.a, self.b)
+            math.sqrt(a, b)
 
     #########################
 
