@@ -92,9 +92,8 @@ class TestCalculator(unittest.TestCase):
         # result is a float
         self.assertIsInstance(result, float)
 
-        # value error for assertRaises
-        with self.assertRaises(ValueError):
-            math.sqrt(a)
+        # ensure result is equal to expected
+        self.assertEqual(result, expected)
 
     #########################
 
